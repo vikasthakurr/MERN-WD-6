@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* div>h1 {
+        color: red;
+      } */
+      /* p{
+        color: red;
+      } */
+
+      h1:nth-child(){
+        color: yellow;
+      }
+      h1::before{
+        content: "hello";
+        color: green;
+      }
+        h1::after{
+            content: "world";
+            color: red;
+        }
+        ::marker{
+            color: green;
+        }
+        input[type="text"]{
+            color: red;
+            border: 2px solid green;
+        }
+        input::placeholder{
+            color: green;
+        }
+        input[type="text"]:focus{
+            width: 450px;
+            height: 100px;
+        }
+    </style>
+  </head>
+  <body>
+      <h1>this is heading</h1>
+
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+
+      <input type="text" placeholder="enter your name">
+     
+      
+
+     
+  </body>
+</html>
