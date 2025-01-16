@@ -13,48 +13,59 @@
         color: red;
       } */
 
-      h1:nth-child(){
+      h1:nth-child() {
         color: yellow;
       }
-      h1::before{
+      h1::before {
         content: "hello";
         color: green;
       }
-        h1::after{
-            content: "world";
-            color: red;
-        }
-        ::marker{
-            color: green;
-        }
-        input[type="text"]{
-            color: red;
-            border: 2px solid green;
-        }
-        input::placeholder{
-            color: green;
-        }
-        input[type="text"]:focus{
-            width: 450px;
-            height: 100px;
-        }
+      h1::after {
+        content: "world";
+        color: red;
+      }
+      ::marker {
+        color: green;
+      }
+      input[type="text"] {
+        color: red;
+        border: 2px solid green;
+      }
+      input::placeholder {
+        color: green;
+      }
+      input[type="text"]:focus {
+        width: 450px;
+        height: 100px;
+      }
+      /* div p{
+        color: red;
+      } */
+
+      div>p{
+        color: green;
+      }
     </style>
   </head>
   <body>
-      <h1>this is heading</h1>
+    <h1>this is heading</h1>
 
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-      </ul>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
 
-      <input type="text" placeholder="enter your name">
-     
-      
+    <input type="text" placeholder="enter your name" />
 
-     
+    <div>
+        <p>this is para</p>
+        <span>
+            <p>this is para 2</p>
+        </span>
+    </div>
+    
   </body>
 </html>
