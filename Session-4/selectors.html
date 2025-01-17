@@ -1,26 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
     <style>
-        p:nth-child(2){
-            color: red;
-        }
-/* marker styling */
-ol::marker{
-    color: red;
-}
+      /* Universal Selector */
+      /* The universal selector (*) applies styles to all elements in the document. */
+      * {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Type Selector */
+      /* The type selector targets all elements of a specific HTML tag, e.g., <h1>. */
+      h1 {
+        color: darkblue;
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      /* Class Selector */
+      /* The class selector targets elements with a specific class attribute value, prefixed by a dot (.). */
+      .highlight {
+        color: white;
+        background-color: darkorange;
+        padding: 0.5rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      /* ID Selector */
+      /* The ID selector targets a single, unique element identified by an ID attribute, prefixed by a hash (#). */
+      #main {
+        color: white;
+        background-color: teal;
+        padding: 1rem;
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      /* Grouping Selector */
+      /* Grouping selectors apply the same styles to multiple elements, separated by commas. */
+      h2,
+      p {
+        color: darkgreen;
+        margin: 1rem;
+      }
+
+      /* Descendant Selector */
+      /* The descendant selector targets elements nested within a specified parent element. */
+      div p {
+        color: darkred;
+      }
+
+      /* Child Selector */
+      /* The child selector (>) targets only direct child elements of a specified parent element. */
+      ul > li {
+        color: darkviolet;
+        list-style: square;
+      }
+
+      /* nth-child Selector */
+      /* The nth-child pseudo-class selects elements based on their position within their parent (e.g., odd or even). */
+      ul li:nth-child(odd) {
+        background-color: lightgray;
+      }
+      ul li:nth-child(even) {
+        background-color: lightblue;
+      }
+
+      /* Marker Pseudo-element */
+      /* The ::marker pseudo-element styles the markers (bullets or numbers) of list items. */
+      ul li::marker {
+        color: darkorange;
+        font-size: 1.2rem;
+      }
+
+      /* Pseudo-class Selector */
+      /* Pseudo-classes apply styles to elements in a specific state, e.g., :hover applies to elements being hovered over. */
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+
+      /* Attribute Selector */
+      /* Attribute selectors target elements based on the presence or value of their attributes. */
+      input[type="text"] {
+        border: 2px solid darkgreen;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+      }
+      input[placeholder] {
+        font-style: italic;
+        color: gray;
+      }
     </style>
-</head>
-<body>
-   <ol>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-   </ol>
-</body>
+  </head>
+  <body>
+    <h1>CSS Selectors</h1>
+
+    <!-- Class Selector -->
+    <p class="highlight">This text is styled using a class selector.</p>
+
+    <!-- ID Selector -->
+    <div id="main">This is styled using an ID selector.</div>
+
+    <!-- Grouping Selector -->
+    <h2>This is a grouped selector example.</h2>
+    <p>This is another grouped selector example.</p>
+
+    <!-- Descendant Selector -->
+    <div>
+      <p>This paragraph is styled using a descendant selector.</p>
+    </div>
+
+    <!-- Child Selector -->
+    <ul>
+      <li>Child selector example - item 1</li>
+      <li>Child selector example - item 2</li>
+      <li>Child selector example - item 3</li>
+      <li>Child selector example - item 4</li>
+    </ul>
+
+    <!-- nth-child Selector -->
+    <ul>
+      <li>nth-child example - item 1</li>
+      <li>nth-child example - item 2</li>
+      <li>nth-child example - item 3</li>
+      <li>nth-child example - item 4</li>
+    </ul>
+
+    <!-- Pseudo-class Selector -->
+    <a href="#"
+      >Hover over this link to see the pseudo-class selector in action.</a
+    >
+
+    <!-- Attribute Selector -->
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" />
+    </form>
+  </body>
 </html>

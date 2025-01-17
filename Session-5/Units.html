@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: hsla(0, 0%, 0%, 0.8);
+        }
+
+        .container {
+            margin-bottom: 2rem;
+        }
+
+        .example {
+            background-color: lightblue;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Units</h1>
+    <p>CSS units define how to measure dimensions, spacing, and font sizes. They are categorized into relative and absolute units.</p>
+    
+    <div class="container">
+        <h2>Absolute Units</h2>
+        <p>These units have a fixed size and are not affected by other elements or screen sizes.</p>
+        <ul>
+            <li><strong>px (pixels):</strong> A single pixel of the display.</li>
+            <div class="example" style="width: 100px; height: 50px;">Width: 100px, Height: 50px</div>
+
+            <li><strong>cm (centimeters):</strong> Measurement in centimeters.</li>
+            <div class="example" style="width: 5cm; height: 2cm;">Width: 5cm, Height: 2cm</div>
+
+            <li><strong>mm (millimeters):</strong> Measurement in millimeters.</li>
+            <div class="example" style="width: 20mm; height: 10mm;">Width: 20mm, Height: 10mm</div>
+
+            <li><strong>in (inches):</strong> Measurement in inches (1in = 2.54cm).</li>
+            <div class="example" style="width: 2in; height: 1in;">Width: 2in, Height: 1in</div>
+
+            <li><strong>pt (points):</strong> 1/72 of an inch.</li>
+            <div class="example" style="width: 100pt; height: 50pt;">Width: 100pt, Height: 50pt</div>
+
+            <li><strong>pc (picas):</strong> 1 pica = 12 points.</li>
+            <div class="example" style="width: 10pc; height: 5pc;">Width: 10pc, Height: 5pc</div>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Relative Units</h2>
+        <p>These units are relative to another value, such as the font size of the parent or the viewport.</p>
+        <ul>
+            <li><strong>% (percentage):</strong> Relative to the parent element's size.</li>
+            <div class="example" style="width: 50%; height: 50%;">Width: 50%, Height: 50%</div>
+
+            <li><strong>em:</strong> Relative to the font size of the element's parent.</li>
+            <div class="example" style="font-size: 2em;">Font-size: 2em</div>
+
+            <li><strong>rem (root em):</strong> Relative to the root element's font size.</li>
+            <div class="example" style="font-size: 1.5rem;">Font-size: 1.5rem</div>
+
+            <li><strong>vw (viewport width):</strong> 1% of the viewport's width.</li>
+            <div class="example" style="width: 50vw; height: 10vh;">Width: 50vw, Height: 10vh</div>
+
+            <li><strong>vh (viewport height):</strong> 1% of the viewport's height.</li>
+            <div class="example" style="width: 20vw; height: 50vh;">Width: 20vw, Height: 50vh</div>
+
+            <li><strong>vmin:</strong> 1% of the smaller of the viewport's width or height.</li>
+            <div class="example" style="width: 10vmin; height: 10vmin;">Width: 10vmin, Height: 10vmin</div>
+
+            <li><strong>vmax:</strong> 1% of the larger of the viewport's width or height.</li>
+            <div class="example" style="width: 10vmax; height: 10vmax;">Width: 10vmax, Height: 10vmax</div>
+
+            <li><strong>ch:</strong> Relative to the width of the "0" character in the element's font.</li>
+            <div class="example" style="width: 30ch;">Width: 30ch</div>
+
+            <li><strong>ex:</strong> Relative to the height of the element's font's "x" character.</li>
+            <div class="example" style="height: 2ex;">Height: 2ex</div>
+        </ul>
+    </div>
+</body>
+</html>
