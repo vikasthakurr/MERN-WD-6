@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model Example</title>
+
+    <style>
+      /* 
+            CSS Box Model Notes:
+            ---------------------
+            The CSS box model is the foundation of how elements are laid out and spaced on a web page.
+            Each HTML element is considered as a rectangular box and consists of the following layers:
+            
+            1. **Content**: The actual content of the box (e.g., text, image).
+            2. **Padding**: Clears an area around the content inside the box. It is transparent.
+            3. **Border**: Surrounds the padding and content; its size and style can be customized.
+            4. **Margin**: Clears space outside the border, creating space between elements.
+        */
+
+      /* Container styles demonstrate the Box Model in action */
+
+      /* box sizing */
+      /* what is box sizing in box model */
+      * {
+        box-sizing: border-box;
+      }
+      
+
+
+      #container {
+        width: 300px; /* Content width */
+        height: 300px; /* Content height */
+        background-color: antiquewhite; /* Background color of the content */
+        border: 5px solid black; /* Border surrounding the padding */
+        padding: 20px; /* Space between content and border */
+        margin: 50px auto; /* Space outside the border, centering the box horizontally */
+        
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        Example Explanation for Students:
+        ----------------------------------
+        This div demonstrates the box model.
+        - The "content" area is the 300px by 300px circle in the center.
+        - The "padding" adds 20px space between the content and the border.
+        - The "border" is 5px wide and black in color.
+        - The "margin" creates 50px of space outside the border and centers the element horizontally.
+    -->
+    <div id="container"></div>
+    
+  </body>
+</html>
