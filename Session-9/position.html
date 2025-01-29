@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        background-color: bisque;
+        height: 1600px;
+        width: 600px;
+        position: relative;
+      }
+      .box {
+        background-color: aqua;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+      }
+      .box-1 {
+        /* position: relative; */
+        /* left: 50px; */
+        /* top: 50px; */
+        /* right: 20px; */
+        /* bottom: 50px; */
+        /* position: absolute;
+        top: 10px; */
+      }
+      .box-4{
+        /* position: fixed;
+        left: 50px; */
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+
+  <!-- 
+css position property:
+    static==>default
+    relative ==>relative to its normal position
+    absolute ==>relative to its nearest positioned ancestor
+    fixed ==>relative to the viewport
+    sticky ==>relative to its nearest scrollable ancestor
+-->
+  <body>
+    <div class="container">
+      <div class="box box-1">Box-1</div>
+      <div class="box box-2">Box-2</div>
+      <div class="box box-3">Box-3</div>
+      <div class="box box-4">Box-4</div>
+    </div>
+  </body>
+</html>
