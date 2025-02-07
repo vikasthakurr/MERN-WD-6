@@ -76,14 +76,31 @@
 // console.log(age);
 // console.log(age2);
 
-var obj ={
-  name: "vikas",
-  age:25
-}
+
+// const prompt=require("prompt-sync")();
+// let name = prompt("Enter your name");
+// console.log(name);
+
+// function add (a,b){
+//   var ans = a+b;
+//   return ans;
+// }
+
+// console.log(add(5,6));
 
 
-var obj2 = obj;
-obj2.age =30;
+// var add = function(a , b){
+//   var ans = a+b;
+//   return ans;
 
-console.log(obj);
-console.log(obj2);
+// }
+
+// console.log(add(5,6));
+
+
+// var add = (a,b) =>{
+//   var sum = a+b;
+//   return sum;
+// }
+
+// console.log(add(5,6));

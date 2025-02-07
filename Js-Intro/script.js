@@ -11,7 +11,21 @@
 
 // var age =25;
 
+// function add (a,b){
+//     var ans = a+b;
+//     return ans;
+// }
 
-console.log(age);
+// console.log(add(10,15));
 
-var age =25;
+// var add = function (a, b) {
+//   var ans = a + b;
+//   return ans;
+// };
+
+// console.log(add(10, 15));
+
+var add = () => {
+  var ans = 10 + 15;
+  return ans;
+}
