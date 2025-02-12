@@ -1,12 +1,5 @@
-// 07/02/25
-// 1. data types in js
-// string, number, boolean, undefined, null ==> primitive data types
-// function, arrays, objects ==> reference data types
-// operator in js 
-// conditional statement in js (if, else, else if, switch and ternary operator(condition ? true : false))
-//loops (for, while, do while)
-// for each (arrays)
-// for in loop (objects)
+
+
 
 
 
