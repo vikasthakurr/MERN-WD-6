@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: monospace;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      .container {
+        max-width: 350px;
+        margin: 30% auto;
+        border: 2px solid red;
+      }
+      p {
+        font-size: 26px;
+      }
+      input[type="color"] {
+        width: 100px;
+        height: 80px;
+        cursor: pointer;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Color Picker</h2>
+      <input type="color" name="" id="colorBox" />
+      <p id="colorCode">#ffffff</p>
+    </div>
+
+    <script>
+      const colorBox = document.getElementById("colorBox");
+      const colorCode = document.getElementById("colorCode");
+
+      colorBox.addEventListener("input", () => {
+        document.body.style.backgroundColor = colorBox.value;
+        colorCode.innerText = colorBox.value;
+      });
+    </script>
+  </body>
+</html>
