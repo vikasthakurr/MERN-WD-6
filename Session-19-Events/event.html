@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>events</h1>
+
+    <!-- click event -->
+    <!-- <button type="button" id="btn">click me</button>
+    <script>
+      const btn = document.querySelector("#btn"); -->
+
+    // btn.addEventListener("click", (event) => { // console.log("button is
+    clicked"); // console.log(event); // // alert("button is clicked"); // });
+    // btn.addEventListener("dblclick", () => { // console.log("button is double
+    clicked"); // btn.textContent = "this is doubled clicked"; // }); //
+    btn.addEventListener("mouseover", () => { // alert("button is hovered"); //
+    }); // btn.addEventListener("mouseout", () => { // alert("button is out of
+    focus") // });
+
+    <!-- </script> -->
+
+    <!-- keypress event -->
+    <input type="text" id="myInput" />
+    <p>Press a key in the input</p>
+    <script>
+      const input = document.getElementById("myInput");
+      //   input.addEventListener("keypress", () => {
+      //     console.log(event);
+      //     alert("key is pressed:" + event.key);
+
+      //   });
+
+      // input.addEventListener("blur", ()=>{
+      //     alert("input is out of focus")
+      // })
+      // input.addEventListener("focus", ()=>{
+      //     alert("input is in  focus")
+      // })
+    </script>
+
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = form.name.value;
+        const email = form.email.value;
+        alert(`Name: ${name}, Email: ${email}`);
+      });
+    </script>
+  </body>
+</html>
