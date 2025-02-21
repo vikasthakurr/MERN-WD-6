@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Deligation</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .black{
+            background-color: black;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box yellow"></div>
+        <div class="box green"></div>
+        <div class="box red"></div>
+        <div class="box black"></div>
+    </div>
+    <p id="clickedBox"></p>
+
+    <script>
+        const container = document.querySelector(".container");
+        const boxes = document.querySelectorAll(".box");
+        let clickedBox = document.getElementById("clickedBox");
+
+        let newDiv = document.createElement("div");
+        newDiv.className = "box blue";
+
+        container.appendChild(newDiv);
+
+        container.addEventListener("click", (event)=>{
+            console.log(event.target);
+
+            clickedBox.textContent = event.target.className;
+        })
+    </script>
+    
+</body>
+</html>
