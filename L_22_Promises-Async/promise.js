@@ -111,7 +111,7 @@
 // })
 
 
-//Promise.any() Method resolves with the first fulfilled promise. If all are rejected, it rejects with an AggregateErro
+//Promise.any() Method resolves with the first fulfilled promise. If all are rejected, it rejects with an AggregateError
 
 // const p1 = Promise.reject("success");
 // const  p2 = Promise.resolve("rejected");
