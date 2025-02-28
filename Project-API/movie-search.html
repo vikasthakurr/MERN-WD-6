@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search App</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #222;
+        color: white;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #333;
+        border-radius: 10px;
+      }
+
+      input {
+        padding: 10px;
+        width: 70%;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px;
+        background: #ff9800;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      #movie-info {
+        margin-top: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      img {
+        width: 200px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Movie Search</h1>
+      <input type="text" id="search-input" placeholder="Enter movie title..." />
+      <button id="search-btn">Search</button>
+
+      <div id="movie-info" class="hidden">
+        <img id="movie-poster" src="" alt="Movie Poster" />
+        <h2 id="movie-title"></h2>
+        <p><strong>Year:</strong> <span id="movie-year"></span></p>
+        <p><strong>Genre:</strong> <span id="movie-genre"></span></p>
+        <p><strong>Director:</strong> <span id="movie-director"></span></p>
+        <p><strong>Plot:</strong> <span id="movie-plot"></span></p>
+        <p><strong>IMDb Rating:</strong> <span id="movie-rating"></span></p>
+      </div>
+    </div>
+    <script>
+      const apiKey = ""; // Replace with your API key
+      const searchBtn = document.getElementById("search-btn");
+      const searchInput = document.getElementById("search-input");
+      const movieInfo = document.getElementById("movie-info");
+
+      searchBtn.addEventListener("click", () => {
+        const movieTitle = searchInput.value.trim();
+        if (movieTitle === "") {
+          alert("Please enter a movie title");
+          return;
+        }
+        fetchMovieDetails(movieTitle);
+      });
+
+      function fetchMovieDetails(title) {
+        const apiUrl = `https://www.omdbapi.com/?t=${title}&apikey=${apiKey}`;
+
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.Response === "False") {
+              alert("Movie not found!");
+            } else {
+              displayMovie(data);
+            }
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+      }
+
+      function displayMovie(data) {
+        document.getElementById("movie-title").textContent = data.Title;
+        document.getElementById("movie-year").textContent = data.Year;
+        document.getElementById("movie-genre").textContent = data.Genre;
+        document.getElementById("movie-director").textContent = data.Director;
+        document.getElementById("movie-plot").textContent = data.Plot;
+        document.getElementById("movie-rating").textContent = data.imdbRating;
+        document.getElementById("movie-poster").src =
+          data.Poster !== "N/A" ? data.Poster : "placeholder.jpg";
+
+        movieInfo.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>
